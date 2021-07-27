@@ -23,7 +23,7 @@ namespace Packt.Shared
 [Column(TypeName = "nchar (5)")]
 [StringLength(5)]
 [RegularExpression("[A-Z]{5}")]
-        public string CustomerId { get; set; }
+        public string CustomerID { get; set; }
         [Required]
         [Column(TypeName = "nvarchar (40)")]
         public string CompanyName { get; set; }
