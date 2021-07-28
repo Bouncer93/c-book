@@ -9,16 +9,16 @@ namespace NorthwindService.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CustomersController : ControllerBase
+    public class WeatherforecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<CustomersController> _logger;
+        private readonly ILogger<WeatherforecastController> _logger;
 
-        public CustomersController(ILogger<CustomersController> logger)
+        public WeatherforecastController(ILogger<WeatherforecastController> logger)
         {
             _logger = logger;
         }
