@@ -87,3 +87,4 @@ C:\Users\Muaz\Documents\code\PracticalApps\NorthwindMvc\obj\Debug\net5.0\Razor\V
 C:\Users\Muaz\Documents\code\PracticalApps\NorthwindMvc\obj\Debug\net5.0\Razor\Views\Home\ProductDetail.cshtml.g.cs
 C:\Users\Muaz\Documents\code\PracticalApps\NorthwindMvc\obj\Debug\net5.0\Razor\Views\Home\ModelBinding.cshtml.g.cs
 C:\Users\Muaz\Documents\code\PracticalApps\NorthwindMvc\obj\Debug\net5.0\Razor\Views\Home\ProductsThatCostMoreThan.cshtml.g.cs
+C:\Users\Muaz\Documents\code\PracticalApps\NorthwindMvc\obj\Debug\net5.0\Razor\Views\Home\Customers.cshtml.g.cs

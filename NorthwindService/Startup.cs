@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Mvc.Formatters;
 using Packt.Shared;
 using static System.Console;
 using NorthwindService.Repositories;
+using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace NorthwindService
 {
@@ -31,7 +32,8 @@ namespace NorthwindService
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        {   
+            services.AddCors();
             string databasePath = Path.Combine("..", "Northwind.db");
             services.AddDbContext<Northwind>(options =>
             options.UseSqlite($"Data Source={databasePath}"));
@@ -62,6 +64,7 @@ namespace NorthwindService
             });
 
             services.AddScoped<ICustomerRepository,CustomerRepository>();
+            services.AddHealthChecks().AddDbContextCheck<Northwind>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -71,15 +74,24 @@ namespace NorthwindService
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NorthwindService v1"));
+                app.UseSwaggerUI(c => {c.SwaggerEndpoint("/swagger/v1/swagger.json", "NorthwindService v1");
+                c.SupportedSubmitMethods(new []{SubmitMethod.Get,SubmitMethod.Post,SubmitMethod.Put,SubmitMethod.Delete});
+                });
             }
+
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseAuthorization();
+                        app.UseCors(configurePolicy:options=>{
+            options.WithMethods("GET","POST","PUT","DELETE");
+            options.WithOrigins("https://localhost:5002");
 
+            });
+
+            app.UseAuthorization();
+app.UseHealthChecks(path: "/howdoyoufeel");
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

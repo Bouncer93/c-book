@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "iY7+FOXeOgOR9YxkFtf1r+EvBAK8IeSuG4ogvnUf/19TmUUCfCgnqvMoC8OaLy87OiHcTz/QxHGkyM4Hkc6HEQ==",
-  "success": true,
+  "dgSpecHash": "2nMtmgYoxKr6Er4RkLQYSspzIkElVyAKnhcxInFBC6XsDz/GgTWqbQNc5x62lZbS9GtiD5mtQvgI1cbL1Pjyuw==",
+  "success": false,
   "projectFilePath": "C:\\Users\\Muaz\\Documents\\code\\PracticalApps\\NorthwindService\\NorthwindService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Muaz\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -22,6 +22,11 @@
     "C:\\Users\\Muaz\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
     "C:\\Users\\Muaz\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Muaz\\.nuget\\packages\\microsoft.extensions.dependencymodel\\5.0.0\\microsoft.extensions.dependencymodel.5.0.0.nupkg.sha512",
+    "C:\\Users\\Muaz\\.nuget\\packages\\microsoft.extensions.diagnostics.healthchecks\\5.0.0\\microsoft.extensions.diagnostics.healthchecks.5.0.0.nupkg.sha512",
+    "C:\\Users\\Muaz\\.nuget\\packages\\microsoft.extensions.diagnostics.healthchecks.abstractions\\5.0.0\\microsoft.extensions.diagnostics.healthchecks.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Muaz\\.nuget\\packages\\microsoft.extensions.diagnostics.healthchecks.entityframeworkcore\\5.0.0\\microsoft.extensions.diagnostics.healthchecks.entityframeworkcore.5.0.0.nupkg.sha512",
+    "C:\\Users\\Muaz\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\5.0.0\\microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Muaz\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\5.0.0\\microsoft.extensions.hosting.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Muaz\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\Muaz\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Muaz\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
@@ -40,5 +45,15 @@
     "C:\\Users\\Muaz\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
     "C:\\Users\\Muaz\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.AspNetCore.Mvc.Api.Analyzers with version (>= 3.0.0)\r\n  - Found 8 version(s) in nuget.org [ Nearest version: 3.0.0-preview3-19153-02 ]\r\n  - Found 0 version(s) in Microsoft Visual Studio Offline Packages",
+      "libraryId": "Microsoft.AspNetCore.Mvc.Api.Analyzers",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

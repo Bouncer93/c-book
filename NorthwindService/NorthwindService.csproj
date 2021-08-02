@@ -10,6 +10,11 @@
   <ItemGroup>
 <ProjectReference Include=
 "..\NorthwindContextLib\NorthwindContextLib.csproj" />
+<PackageReference Include=
+"Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore"
+Version="5.0.0" />
+
+
 </ItemGroup>
 
 </Project>
